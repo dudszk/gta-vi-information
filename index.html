@@ -1,1 +1,135 @@
-O HTML possui mais de 100 tags diferentes para estruturar um site. Abaixo estão as tags mais importantes e utilizadas na web, divididas por categoria:Estrutura Básica e Metadados<html>: Elemento raiz de um documento HTML.<head>: Contém metadados, links para scripts e folhas de estilo.<title>: Define o título da página exibido na aba do navegador.<meta>: Define metadados (como codificação de caracteres e viewport).<link>: Conecta o documento a recursos externos (como arquivos CSS).<body>: Contém todo o conteúdo visível do site.Estrutura Semântica de Layout<header>: Cabeçalho da página ou de uma seção.<nav>: Bloco de links de navegação.<main>: Conteúdo principal e exclusivo da página.<section>: Define uma seção genérica de conteúdo.<article>: Conteúdo independente (como um post de blog ou notícia).<aside>: Conteúdo secundário ou barra lateral.<footer>: Rodapé da página ou seção.Texto e Seções<h1> a <h6>: Títulos da página (do mais importante <h1> ao menos importante <h6>).<p>: Parágrafo de texto.<span>: Contêiner genérico em linha (inline) para estilização de trechos de texto.<div>: Contêiner genérico em bloco para agrupamento de elementos.<br>: Quebra de linha simples.<hr>: Linha horizontal para separação temática.Formatação de Texto<strong>: Texto em negrito (indica importância).<em>: Texto em itálico (indica ênfase).<mark>: Texto destacado/grifado.<code>: Trecho de código de computador.<blockquote>: Citação longa em bloco.Mídia e Links<a>: Link para outra página ou recurso (usando o atributo href).<img>: Exibe uma imagem (usando os atributos src e alt).<audio>: Reprodutor de áudio.<video>: Reprodutor de vídeo.<iframe>: Incorpora outra página web dentro da atual.Listas<ul>: Lista não ordenada (com marcadores/pontos).<ol>: Lista ordenada (numerada).<li>: Item individual de uma lista.Formulários e Entradas<form>: Formulário para envio de dados.<input>: Campo de entrada de dados (texto, senha, e-mail, botão, etc.).<textarea>: Campo de texto de múltiplas linhas.<button>: Botão clicável.<select> e <option>: Menu suspenso (dropdown) de opções.<label>: Rótulo descritivo para um campo de formulário.Tabelas<table>: Define uma tabela.<tr>: Linha da tabela.<th>: Célula de cabeçalho da tabela.<td>: Célula de dados da tabela.
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vice Pulse - GTA VI Central</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="navbar">
+        <div class="logo">VICE<span>PULSE</span></div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">O Jogo</a></li>
+                <li><a href="#protagonistas">Protagonistas</a></li>
+                <li><a href="#mapa">Leonida</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="tagline">BEM-VINDO DE VOLTA A VICE CITY</span>
+            <h1>GRAND THEFT AUTO VI</h1>
+            <p>Tudo o que você precisa saber sobre o lançamento mais aguardado da década.</p>
+            
+            <!-- Contador Regressivo em JS -->
+            <div class="countdown-container">
+                <h3>Contagem Regressiva para o Lançamento</h3>
+                <div id="countdown">
+                    <div><span id="days">00</span><small>Dias</small></div>
+                    <div><span id="hours">00</span><small>Horas</small></div>
+                    <div><span id="minutes">00</span><small>Minutos</small></div>
+                    <div><span id="seconds">00</span><small>Segundos</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE O JOGO -->
+    <section id="sobre" class="section-container">
+        <h2 class="section-title">O Que Esperar de GTA VI</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">🌴</div>
+                <h3>O Maior Mapa da Franquia</h3>
+                <p>O estado fictício de <strong>Leonida</strong> abriga as luzes neon de Vice City, os pântanos de Grassriver e as praias paradisíacas das Keys.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📱</div>
+                <h3>Sátira Social & Redes Sociais</h3>
+                <p>A cultura moderna de influenciadores, transmissões ao vivo e viralização faz parte integrante do ecossistema e das missões do jogo.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🚘</div>
+                <h3>Física e Interação Avançadas</h3>
+                <p>Níveis inéditos de realismo na física de veículos, inteligência artificial dos pedestres e interiores de estabelecimentos 100% exploráveis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROTAGONISTAS -->
+    <section id="protagonistas" class="section-container alt-bg">
+        <h2 class="section-title">A Dupla Dinâmica</h2>
+        <p class="section-subtitle">Conheça os personagens centrais da trama inspirada no casal Bonnie & Clyde.</p>
+        
+        <div class="characters-flex">
+            <div class="char-card lucia">
+                <div class="char-info">
+                    <h3>Lucia</h3>
+                    <span class="badge">Protagonista</span>
+                    <p>A primeira protagonista feminina da era 3D de GTA. Destemida, astuta e recém-saída da prisão de Leonida, buscando retomar o controle de sua vida nos esquemas do crime.</p>
+                </div>
+            </div>
+            <div class="char-card jason">
+                <div class="char-info">
+                    <h3>Jason</h3>
+                    <span class="badge">Protagonista</span>
+                    <p>Parceiro de Lucia no crime e na vida. Habilidoso no manuseio de armas e pilotagem, enfrenta dilemas entre a lealdade e os perigos de grandes assaltos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAPA INTERATIVO / GUIAS -->
+    <section id="mapa" class="section-container">
+        <h2 class="section-title">Explorando o Estado de Leonida</h2>
+        <p class="section-subtitle">Filtre os pontos turísticos e regiões confirmadas:</p>
+
+        <!-- Filtros ativados via JavaScript -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="urban">Zonas Urbanas</button>
+            <button class="filter-btn" data-filter="nature">Natureza & Pântanos</button>
+            <button class="filter-btn" data-filter="coastal">Litoral & Ilhas</button>
+        </div>
+
+        <div class="locations-grid">
+            <div class="location-card" data-category="urban">
+                <h4>Vice City Downtown</h4>
+                <p>Aranha-céus, baladas badaladas e o coração financeiro de Leonida.</p>
+            </div>
+            <div class="location-card" data-category="coastal">
+                <h4>Ocean Drive</h4>
+                <p>A famosa avenida beira-mar iluminada por letreiros neon e veículos de luxo.</p>
+            </div>
+            <div class="location-card" data-category="nature">
+                <h4>Grassriver Swamps</h4>
+                <p>Pântanos densos e perigosos repletos de fauna selvagem e gangues rurais.</p>
+            </div>
+            <div class="location-card" data-category="coastal">
+                <h4>Gator Keys</h4>
+                <p>Cadeia de ilhas tropicais conectadas por pontes extensas sobre o oceano.</p>
+            </div>
+            <div class="location-card" data-category="urban">
+                <h4>Port Gellhorn</h4>
+                <p>Zona industrial e comercial com grande atividade de contrabando.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 Vice Pulse - Site criado por fã para fins de entretenimento. GTA VI é marca registrada da Rockstar Games.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

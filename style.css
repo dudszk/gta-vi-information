@@ -1,67 +1,278 @@
-O CSS é composto por propriedades que controlam o estilo visual dos elementos HTML. Abaixo estão as propriedades mais importantes e utilizadas na web, divididas por categoria:
+/* VARIÁVEIS DE CORES NEON ESTILO VICE CITY */
+:root {
+    --bg-dark: #0d0614;
+    --bg-card: #180b27;
+    --neon-pink: #ff2a85;
+    --neon-blue: #00f0ff;
+    --neon-purple: #9d4edd;
+    --text-color: #f1f1f1;
+    --text-muted: #a0a0b8;
+}
 
-Layout e Modelo de Caixa (Box Model)
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-display: Define como o elemento é exibido (block, inline, flex, grid, none).
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-position: Define o método de posicionamento (static, relative, absolute, fixed, sticky).
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    background-color: rgba(13, 6, 20, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--neon-pink);
+}
 
-width / height: Largura e altura do elemento.
+.logo {
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: #fff;
+    letter-spacing: 2px;
+}
 
-margin: Espaçamento externo ao redor do elemento.
+.logo span {
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px var(--neon-pink);
+}
 
-padding: Espaçamento interno entre o conteúdo e a borda.
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
 
-border: Estilo, largura e cor da borda (border: 1px solid #000).
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
 
-box-sizing: Define como largura e altura são calculadas (border-box, content-box).
+.navbar a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 8px var(--neon-blue);
+}
 
-Flexbox e Grid Layout
+/* HERO SECTION */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+    background: linear-gradient(135deg, #2b0836 0%, #0d0614 100%);
+    margin-top: 60px;
+}
 
-flex-direction: Direção dos itens em um container flexível (row, column).
+.hero h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 0 0 20px var(--neon-pink), 0 0 40px var(--neon-pink);
+    margin-bottom: 1rem;
+}
 
-justify-content: Alinhamento dos itens no eixo principal (center, space-between, flex-start).
+.tagline {
+    color: var(--neon-blue);
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+}
 
-align-items: Alinhamento dos itens no eixo secundário (center, flex-start, stretch).
+/* CONTADOR REGRESSIVO */
+.countdown-container {
+    margin-top: 2.5rem;
+    background: rgba(24, 11, 39, 0.8);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--neon-purple);
+    box-shadow: 0 0 15px rgba(157, 78, 221, 0.3);
+}
 
-grid-template-columns / grid-template-rows: Define colunas e linhas em um layout Grid.
+.countdown-container h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
 
-gap: Espaçamento entre itens em Flexbox ou Grid.
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
 
-Cores e Fundos
+#countdown div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-color: Cor do texto.
+#countdown span {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
 
-background-color: Cor de fundo do elemento.
+/* SEÇÕES GENÉRICAS */
+.section-container {
+    padding: 5rem 8%;
+}
 
-background-image: Define uma imagem de fundo (url('imagem.jpg')).
+.alt-bg {
+    background-color: #12081f;
+}
 
-background-size: Dimensionamento da imagem de fundo (cover, contain).
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    text-shadow: 0 0 10px var(--neon-pink);
+}
 
-opacity: Nível de transparência do elemento (de 0 a 1).
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+}
 
-Tipografia e Texto
+/* CARDS GRID */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
 
-font-family: Família da fonte do texto (ex: Arial, sans-serif).
+.card {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 42, 133, 0.2);
+    transition: transform 0.3s, border-color 0.3s;
+}
 
-font-size: Tamanho do texto (px, rem, %).
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-pink);
+    box-shadow: 0 5px 20px rgba(255, 42, 133, 0.2);
+}
 
-font-weight: Espessura da fonte (normal, bold, 400, 700).
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
 
-text-align: Alinhamento do texto (left, right, center, justify).
+.card h3 {
+    margin-bottom: 0.8rem;
+    color: var(--neon-blue);
+}
 
-text-decoration: Decoração do texto (none, underline).
+/* PROTAGONISTAS */
+.characters-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
 
-line-height: Altura entre linhas de texto.
+.char-card {
+    flex: 1 1 350px;
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    border-left: 5px solid var(--neon-pink);
+}
 
-Efeitos visuais e Animação
+.char-card.jason {
+    border-left-color: var(--neon-blue);
+}
 
-border-radius: Arredondamento das bordas de um elemento.
+.char-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
 
-box-shadow: Sombra projetada em redor do elemento.
+.badge {
+    background: var(--neon-purple);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
 
-transform: Aplica transformações 2D/3D (rotate(), scale(), translate()).
+/* FILTROS E MAPA */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
 
-transition: Controla a velocidade de transição entre estados de propriedades (all 0.3s ease).
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--neon-blue);
+    color: var(--neon-blue);
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-animation: Aplica uma animação definida via regras @keyframes.
+.filter-btn:hover, .filter-btn.active {
+    background: var(--neon-blue);
+    color: var(--bg-dark);
+    box-shadow: 0 0 12px var(--neon-blue);
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.location-card {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.location-card h4 {
+    color: var(--neon-pink);
+    margin-bottom: 0.5rem;
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #06020a;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
