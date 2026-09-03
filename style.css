@@ -1,0 +1,67 @@
+O CSS é composto por propriedades que controlam o estilo visual dos elementos HTML. Abaixo estão as propriedades mais importantes e utilizadas na web, divididas por categoria:
+
+Layout e Modelo de Caixa (Box Model)
+
+display: Define como o elemento é exibido (block, inline, flex, grid, none).
+
+position: Define o método de posicionamento (static, relative, absolute, fixed, sticky).
+
+width / height: Largura e altura do elemento.
+
+margin: Espaçamento externo ao redor do elemento.
+
+padding: Espaçamento interno entre o conteúdo e a borda.
+
+border: Estilo, largura e cor da borda (border: 1px solid #000).
+
+box-sizing: Define como largura e altura são calculadas (border-box, content-box).
+
+Flexbox e Grid Layout
+
+flex-direction: Direção dos itens em um container flexível (row, column).
+
+justify-content: Alinhamento dos itens no eixo principal (center, space-between, flex-start).
+
+align-items: Alinhamento dos itens no eixo secundário (center, flex-start, stretch).
+
+grid-template-columns / grid-template-rows: Define colunas e linhas em um layout Grid.
+
+gap: Espaçamento entre itens em Flexbox ou Grid.
+
+Cores e Fundos
+
+color: Cor do texto.
+
+background-color: Cor de fundo do elemento.
+
+background-image: Define uma imagem de fundo (url('imagem.jpg')).
+
+background-size: Dimensionamento da imagem de fundo (cover, contain).
+
+opacity: Nível de transparência do elemento (de 0 a 1).
+
+Tipografia e Texto
+
+font-family: Família da fonte do texto (ex: Arial, sans-serif).
+
+font-size: Tamanho do texto (px, rem, %).
+
+font-weight: Espessura da fonte (normal, bold, 400, 700).
+
+text-align: Alinhamento do texto (left, right, center, justify).
+
+text-decoration: Decoração do texto (none, underline).
+
+line-height: Altura entre linhas de texto.
+
+Efeitos visuais e Animação
+
+border-radius: Arredondamento das bordas de um elemento.
+
+box-shadow: Sombra projetada em redor do elemento.
+
+transform: Aplica transformações 2D/3D (rotate(), scale(), translate()).
+
+transition: Controla a velocidade de transição entre estados de propriedades (all 0.3s ease).
+
+animation: Aplica uma animação definida via regras @keyframes.
